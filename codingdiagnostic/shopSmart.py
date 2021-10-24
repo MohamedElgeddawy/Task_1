@@ -23,6 +23,9 @@ For orders:  [('apples', 3.0)] best shop is shop2
 from __future__ import print_function
 import shop
 
+# in this fun i am tying to save shop_name and cost 
+# then get Minmume cost
+
 def shopSmart(orderList, fruitShops):
     """
         orderList: List of (fruit, numPound) tuples

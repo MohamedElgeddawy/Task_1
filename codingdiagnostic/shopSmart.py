@@ -23,33 +23,17 @@ For orders:  [('apples', 3.0)] best shop is shop2
 from __future__ import print_function
 import shop
 
-'''
-# in this fun i am tying to save shop_name and cost 
-# then get Minmume cost
 def shopSmart(orderList, fruitShops):
     """
         orderList: List of (fruit, numPound) tuples
         fruitShops: List of FruitShops
     """
+    cost = {}
     for shop in fruitShops:
-        cost = {}
+
         cost[shop] = shop.getPriceOfOrder(orderList)
     Min_shop_price = min(cost, key=cost.get)
     return Min_shop_price 
-
-'''
-def shopSmart(orderList, fruitShops):
-    """
-        orderList: List of (fruit, numPound) tuples
-        fruitShops: List of FruitShops
-    """
-    min_cost=None
-    shop_name = None
-    for shop in fruitShops:
-        cost = shop.getPriceOfOrder(orderList)
-        if min_cost == None or cost < min_cost:
-            min_cost, shop_name = cost, shop
-    return shop_name
 
 if __name__ == '__main__':
     "This code runs when you invoke the script from the command line"
